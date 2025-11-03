@@ -1,0 +1,12 @@
+mmengine
+open3d-python
+easydict
+fvcore
+einops
+torchmetrics
+spconv-cu113
+pytorch-lightning==1.7.0
+setuptools==59.5.0
+omegaconf
+safetensors==0.3.3 
+timm==0.9.12
