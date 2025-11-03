@@ -83,11 +83,11 @@ mkdir ckpts
 # Depth refinement module
 cd pretrain
 wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/pretrain_geodepth.pth
+cd ..
 # Image backbone and geodepth weights
 cd ckpts
 wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/efficientnet-b7_3rdparty_8xb32-aa_in1k_20220119-bf03951c.pth
 wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth
-
 wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/ipformer_semkitti_v1.0.0.part_aa
 wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/ipformer_semkitti_v1.0.0.part_ab
 cat ipformer_semkitti_v1.0.0.part_* > ipformer_semkitti.ckpt
