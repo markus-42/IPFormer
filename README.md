@@ -82,12 +82,15 @@ mkdir ckpts
 
 # Depth refinement module
 cd pretrain
-wget TODO
+wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/pretrain_geodepth.pth
 # Image backbone and geodepth weights
 cd ckpts
-wget TODO
-wget TODO
-wget TODO
+wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/efficientnet-b7_3rdparty_8xb32-aa_in1k_20220119-bf03951c.pth
+wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth
+
+wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/ipformer_semkitti_v1.0.0.part_aa
+wget https://github.com/markus-42/IPFormer/releases/download/v1.0.0/ipformer_semkitti_v1.0.0.part_ab
+cat ipformer_semkitti_v1.0.0.part_* > ipformer_semkitti.ckpt
 
 ```
 
@@ -127,7 +130,7 @@ To evaluate a trained checkpoint directly:
 ```bash
 python eval.py \
   --config_path ./configs/IPFormer_config.py \
-  --ckpt_path ./ckpts/ipformer.ckpt \
+  --ckpt_path ./ckpts/ipformer_semkitti.ckpt \
   --output_dir ./outputs/
   --measure_time
 ```
